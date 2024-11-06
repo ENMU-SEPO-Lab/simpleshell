@@ -6,6 +6,7 @@
 #include <string>
 #include <unistd.h>
 #include <sys/wait.h>
+#include <sys/stat.h>
 
 /**
  * Doxygen comment
@@ -29,7 +30,7 @@ private:
      * 
      * @param argv A vector containing the command and its arguments to be executed.
      */
-    void execute(const std::vector<std::string>& argv);
+    void execute(std::vector<std::string>& argv);
 
     /**
      * @brief Parses a line of input into tokens based on a delimiter.
